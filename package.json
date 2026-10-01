@@ -1,0 +1,23 @@
+{
+  "name": "agent-sandbox-agentcore-portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "synth": "cdk synth --strict",
+    "diff": "cdk diff",
+    "deploy:probe": "cdk deploy AgentSandboxIsolationProbe --require-approval never",
+    "test:infra": "tsx --test infrastructure/probe-stack.test.ts"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.270.0",
+    "constructs": "^10.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "aws-cdk": "2.1142.0",
+    "cdk-nag": "^2.38.2",
+    "tsx": "4.23.13",
+    "typescript": "~5.9.3"
+  }
+}

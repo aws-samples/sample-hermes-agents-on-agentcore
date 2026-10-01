@@ -1,0 +1,5 @@
+boto3==1.43.97
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+PyJWT[crypto]>=2.15,<3
+aws-opentelemetry-distro==0.18.0

@@ -1,0 +1,8 @@
+{
+  "id": "hermes-v1",
+  "protocol_version": 1,
+  "model_protocol": "anthropic_messages",
+  "storage_namespace": "hermes",
+  "masked_skill_files": [".curator_ledger.jsonl", ".usage.json"],
+  "host_lifecycle": true
+}

@@ -1,0 +1,40 @@
+[project]
+name = "agent-sandbox-agentcore-portal"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "boto3>=1.42,<2",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "httpx>=0.28,<1",
+  "PyJWT[crypto]>=2.15,<3",
+  "mangum==0.19.0",
+  "aws-opentelemetry-distro==0.18.0",
+]
+
+[dependency-groups]
+# Portal Lambda layer contents. Versions come from uv.lock; see infrastructure/lambda-bundling.ts.
+lambda = [
+  "boto3",
+  "fastapi",
+  "httpx",
+  "PyJWT[crypto]",
+  "mangum",
+]
+dev = [
+    "pytest>=8,<10",
+    "httpx>=0.28,<1",
+    "ruff>=0.11,<1",
+    "moto[dynamodb]>=5,<6",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends"]

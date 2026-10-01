@@ -1,0 +1,9 @@
+node_modules
+.venv
+.deployment
+.git
+cdk.out
+**/__pycache__
+**/*.pyc
+frontend/node_modules
+frontend/dist

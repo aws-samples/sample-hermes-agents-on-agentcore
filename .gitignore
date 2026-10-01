@@ -1,0 +1,12 @@
+node_modules/
+cdk.out/
+cdk.context.json
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.env
+.deployment/
+frontend/dist/
+.DS_Store

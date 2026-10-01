@@ -1,0 +1,8 @@
+{
+  "id": "echo-v1",
+  "protocol_version": 1,
+  "model_protocol": "anthropic_messages",
+  "storage_namespace": "echo",
+  "masked_skill_files": [],
+  "host_lifecycle": false
+}
